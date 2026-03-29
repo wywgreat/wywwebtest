@@ -1,0 +1,10 @@
+{
+  "name": "arxiv-agent-paper-finder",
+  "version": "1.0.0",
+  "description": "Local web app for arXiv agent-related papers with login, translation, and favorites",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

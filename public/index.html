@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arXiv 智能体论文追踪</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="loginSection" class="card">
+        <h1>登录</h1>
+        <p>请输入账号密码后使用论文更新功能。</p>
+        <form id="loginForm">
+          <label>
+            账号
+            <input id="username" type="text" required />
+          </label>
+          <label>
+            密码
+            <input id="password" type="password" required />
+          </label>
+          <button type="submit">登录</button>
+        </form>
+        <p id="loginError" class="error"></p>
+      </section>
+
+      <section id="appSection" class="hidden">
+        <header class="topbar card">
+          <div>
+            <h1>arXiv 智能体相关论文</h1>
+            <p>主题：agent / multi-agent / autonomous agent / tool use / planning / task decomposition / agentic</p>
+          </div>
+          <button id="logoutBtn" class="ghost">退出登录</button>
+        </header>
+
+        <section class="card controls">
+          <label>
+            时间窗口
+            <select id="timeWindow">
+              <option value="1">最近 1 天</option>
+              <option value="3">最近 3 天</option>
+              <option value="7" selected>最近 7 天</option>
+              <option value="14">最近 14 天</option>
+              <option value="30">最近 30 天</option>
+              <option value="90">最近 90 天</option>
+            </select>
+          </label>
+          <button id="refreshBtn">立即更新</button>
+          <span id="status"></span>
+        </section>
+
+        <section class="card">
+          <h2>论文列表</h2>
+          <div id="papers"></div>
+        </section>
+
+        <section class="card">
+          <h2>我的收藏</h2>
+          <div id="favorites"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
